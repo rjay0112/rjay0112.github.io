@@ -1,0 +1,30 @@
+button {
+  width:70px;
+  padding: 0;
+}
+
+.floor {
+  opacity: 50%;
+}
+
+.img-overlay-wrap {
+  position: relative;
+}
+
+.img-overlay-wrap img { /* <= optional, for responsiveness */
+   display: block;
+   width: 100%;
+   object-fit: cover;
+   height: auto;
+}
+
+.img-overlay-wrap svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.warning {
+  position: absolute;
+  opacity: 0;
+}
