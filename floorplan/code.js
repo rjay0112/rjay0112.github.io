@@ -50,7 +50,7 @@
 
 
 
-setInterval(colourCheck,6000)
+setInterval(colourCheck,60000)
 
 console.log("test")
 locations = document.getElementsByClassName("location")
@@ -72,7 +72,7 @@ function resetTimer(){
 
 
 function colourCheck(){
-  console.log("before")
+  console.log("check")
   locations = document.getElementsByClassName("location")
   for (var i=0;i<locations.length;i++){
     //console.log(locations[i].id)
