@@ -77,7 +77,7 @@ function colourCheck(){
   for (var i=0;i<locations.length;i++){
     //console.log(locations[i].id)
     cur_values = JSON.parse(localStorage.getItem(locations[i].id))
-    elapsed = (Date.now()-cur_values[1])/1000
+    elapsed = (Date.now()-cur_values[1])/3600000
     opacity_shift = elapsed/cur_values[0]
     locations[i].style.opacity=opacity_shift
   }
