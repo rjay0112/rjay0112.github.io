@@ -1,21 +1,42 @@
-button {
-  width:70px;
-  padding: 0;
+.floor {
+  opacity: 100%;
 }
 
-.floor {
-  opacity: 50%;
+.date {
+  position: block;
+}
+
+p {
+  position: relative;
+  float: left;
+  color: grey;
+  font-size: 30px;
 }
 
 .img-overlay-wrap {
   position: relative;
+  float: left;
+  width: 1050px;
 }
 
+.list_view {
+  position: relative;
+}
+
+.calendar_view {
+  position: relative;
+}
+
+.events {
+  position: relative;
+  float: right;
+  background-color: black;
+  width: 280px;
+  height: 752px;
+}
+ 
 .img-overlay-wrap img { /* <= optional, for responsiveness */
-   display: block;
    width: 100%;
-   object-fit: cover;
-   height: auto;
 }
 
 .img-overlay-wrap svg {
@@ -27,4 +48,12 @@ button {
 .warning {
   position: absolute;
   opacity: 0;
+}
+
+polygon {
+  border-color: red;
+  border-radius: 20px;
+}
+body {
+  background-color: black;
 }
