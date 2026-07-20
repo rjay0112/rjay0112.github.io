@@ -10,7 +10,7 @@
 //[DONE]don't restart on page refresh
 //[DONE]resize section
 //make it look a bit nicer
-//Add important dates calendar
+//[DONE]Add important dates calendar
 //[DONE]dark mode
 //allow for multi dates
 //add in real dates and plans
