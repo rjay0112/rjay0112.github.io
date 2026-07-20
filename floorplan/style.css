@@ -2,8 +2,38 @@
   opacity: 100%;
 }
 
+h1 {
+  color: grey;
+  margin: 10px 0px 15px 5px;
+}
+
+h3 {
+  margin: 0px;
+}
+
+table,tr,th,td {
+  font-size: 12px;
+  color: grey;
+}
+
+table {
+  width: 130px;
+}
+
+.month_cal {
+  position: relative;
+  text-align: center;
+  color: grey;
+  float: left;
+  width: 130px;
+  padding-right: 10px;
+}
+
 .date {
-  position: block;
+  position: relative;
+  float: left;
+  width: 30px;
+  text-align: center;
 }
 
 p {
@@ -11,6 +41,29 @@ p {
   float: left;
   color: grey;
   font-size: 30px;
+}
+
+.month {
+  color: grey;
+  font-size: 13px;
+}
+
+.day {
+  color: grey;
+  font-size: 16px;
+}
+.title {
+  position: relative;
+  float: left;
+  color: grey;
+  font-size: 14px;
+  width: 242px;
+  padding-left:8px;
+}
+
+.event{
+  height: auto;
+  display: inline-block;
 }
 
 .img-overlay-wrap {
@@ -21,10 +74,13 @@ p {
 
 .list_view {
   position: relative;
+  height: 500px;
+  float: top;
 }
 
 .calendar_view {
   position: relative;
+  float: bottom;
 }
 
 .events {
@@ -57,3 +113,83 @@ polygon {
 body {
   background-color: black;
 }
+/*
+.r1r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 1%;
+}
+.r2r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 2%;
+}
+.r5r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 5%;
+}
+.r10r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 10%;
+}
+.r20r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 20%;
+}
+.r30r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 30%;
+}
+.r40r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 40%;
+}
+.r50r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 50%;
+}
+.r60r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 60%;
+}
+.r70r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 70%;
+}
+.r80r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 80%;
+}
+.r90r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 90%;
+}
+.r100r {
+  width: 200px;
+  height: 20px;
+  background-color: red;
+  opacity: 100%;
+}
+*/
