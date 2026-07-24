@@ -13,6 +13,7 @@
 //[DONE]Add important dates calendar
 //[DONE]dark mode
 //allow for multi dates
+//give shatha a hug
 //add in real dates and plans
 //adjust mappings
 //adjust urgency colours
@@ -22,11 +23,12 @@
 important_dates = [
   [["July", 24, 2026], "Toronto Island Disc Golf", "Event"],
   [["July", 27, 2026], "Heartstopper Trivia Black Sheep 6:30-9:30 pm", "Event"],
-  [["July", 28, 2026], "Disney Trivia Hemmingways 6-9:30 pm", "Event"],
+  [["July", 28, 2026], "Disney Trivia Hemmingways 6:00-9:30 pm", "Event"],
   [["July", 31, 2026], "Krystyna's Birthday", "Bday"],
   [["Aug", 1, 2026], "Krystyna's Birthday Party 4:00 pm", "Event"],
   [["Aug", 2, 2026], "Alice Oseman Book Signing Indigo Yorkdale 5:00-6:00 pm", "Event"],
   [["Aug", 18, 2026], "Nick's Birthday", "Bday"],
+  [["Aug", 21, 2026], "Aug 21-23 Andrew Cottage", "Trip"],
   [["Sept", 3, 2026], "Sept 3-6 Ottawa RoadTrip", "Trip"],
   [["Sept", 8, 2026], "Brayden's Birthday", "Bday"],
   [["Sept", 12, 2026], "Ethan's Birthday", "Bday"],
