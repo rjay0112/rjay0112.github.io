@@ -16,23 +16,27 @@
 //add in real dates and plans
 //adjust mappings
 //adjust urgency colours
+//add anniversary category & colour
+//Auto page refresh
 
 important_dates = [
-  [["July", 28, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 1", "Event"],
-  [["July", 29, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 2", "Bday"],
-  [["July", 30, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 3", "Trip"],
-  [["July", 31, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 4", "Event"],
-  [["Aug", 1, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 5", "Event"],
-  [["Aug", 2, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 6", "Bday"],
-  [["Aug", 4, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 7", "Event"],
-  [["Aug", 6, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 8", "Bday"],
-  [["Aug", 9, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 9", "Event"],
-  [["Aug", 12, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 10", "Event"],
-  [["Sept", 2, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 11", "Event"],
-  [["Sept", 3, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 12", "Bday"],
-  [["Sept", 5, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 13", "Event"],
-  [["Sept", 8, 2026], "Lorem ipsum dolor sit amet, consectetur adipiscing 14", "Event"],
-
+  [["July", 24, 2026], "Toronto Island Disc Golf", "Event"],
+  [["July", 27, 2026], "Heartstopper Trivia Black Sheep 6:30-9:30 pm", "Event"],
+  [["July", 28, 2026], "Disney Trivia Hemmingways 6-9:30 pm", "Event"],
+  [["July", 31, 2026], "Krystyna's Birthday", "Bday"],
+  [["Aug", 1, 2026], "Krystyna's Birthday Party 4:00 pm", "Event"],
+  [["Aug", 2, 2026], "Alice Oseman Book Signing Indigo Yorkdale 5:00-6:00 pm", "Event"],
+  [["Aug", 18, 2026], "Nick's Birthday", "Bday"],
+  [["Sept", 3, 2026], "Sept 3-6 Ottawa RoadTrip", "Trip"],
+  [["Sept", 8, 2026], "Brayden's Birthday", "Bday"],
+  [["Sept", 12, 2026], "Ethan's Birthday", "Bday"],
+  [["Sept", 17, 2026], "Chris's Birthday", "Bday"],
+  [["Oct", 13, 2026], "Sean & Nicole's Anniversary", "Bday"],
+  [["Oct", 22, 2026], "Grandma's Birthday", "Bday"],
+  [["Oct", 25, 2026], "Nicole's Birthday", "Bday"],
+  [["Oct", 26, 2026], "Isla's Birthday", "Bday"],
+  [["Nov", 8, 2026], "Shatha's Birthday", "Bday"],
+  [["Nov", 9, 2026], "The Canadian Toronto-Vancouver Train", "Trip"]
 ]
 
 cleaning_durations = [
@@ -120,8 +124,9 @@ function colourCheck(){
 function populateUpcomingList(){
   listItems = document.getElementsByClassName("list_view")[0]
   console.log(listItems)
+  current_date = new Date();
   for (var i=0;i<important_dates.length;i++){
-    if(important_dates[i][0][0]=="July"){
+    if(important_dates[i][0][0]==month_to_text(current_date.getMonth())[1]){
       for (var j=0;j<listItems.children.length;j++){
       //for (const event_child of listItems.children){
         console.log("Test")
@@ -132,13 +137,13 @@ function populateUpcomingList(){
         console.log(e_date)
         e_date.style.borderRadius = "4px"
         if(important_dates[i+j][2]=="Bday"){
-          e_date.style.backgroundColor = "#181800"
+          e_date.style.backgroundColor = "#222200"
         }
         else if(important_dates[i+j][2]=="Event"){
-          e_date.style.backgroundColor = "#001818"
+          e_date.style.backgroundColor = "#002222"
         }
         else if(important_dates[i+j][2]=="Trip"){
-          e_date.style.backgroundColor = "#001800"
+          e_date.style.backgroundColor = "#220022"
         }
         e_date.children[0].innerHTML=important_dates[i+j][0][0]
         e_date.children[1].innerHTML=important_dates[i+j][0][1]
@@ -174,19 +179,19 @@ function populateCalendar(){
     //console.log(set_month)
     days_in_month = daysInMonth(set_month.getMonth()+1,set_month.getFullYear())
     //console.log(days_in_month)
-    for (var j=1;j<cal_table.children.length;j++){
-      for (var k=0;k<cal_table.children[j].children.length;k++){
+    for (var j=1;j<cal_table.children.length;j++){ //each row in table
+      for (var k=0;k<cal_table.children[j].children.length;k++){ //each date/cell
         cal_table.children[j].children[k].style.backgroundColor="#000000" 
         if(day_count>0 && day_count<=days_in_month){
           cal_table.children[j].children[k].innerHTML=day_count
           for (var l=0;l<important_dates.length;l++){
             if(important_dates[l][0][0]==month_short && important_dates[l][0][1]==day_count){
               if(important_dates[l][2]=="Bday"){
-                cal_table.children[j].children[k].style.backgroundColor="#181800"
+                cal_table.children[j].children[k].style.backgroundColor="#222200"
               }else if(important_dates[l][2]=="Event"){
-                cal_table.children[j].children[k].style.backgroundColor="#001818"
+                cal_table.children[j].children[k].style.backgroundColor="#002222"
               }else if(important_dates[l][2]=="Trip"){
-                cal_table.children[j].children[k].style.backgroundColor="#000018"
+                cal_table.children[j].children[k].style.backgroundColor="#220022"
               }
             }
           }
