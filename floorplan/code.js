@@ -27,6 +27,7 @@ important_dates = [
   [["July", 31, 2026], "Krystyna's Birthday", "Bday"],
   [["Aug", 1, 2026], "Krystyna's Birthday Party 4:00 pm", "Event"],
   [["Aug", 2, 2026], "Alice Oseman Book Signing Indigo Yorkdale 5:00-6:00 pm", "Event"],
+  [["Aug", 7, 2026], "SpiderMan Movie ??", "Event"],
   [["Aug", 18, 2026], "Nick's Birthday", "Bday"],
   [["Aug", 21, 2026], "Aug 21-23 Andrew Cottage", "Trip"],
   [["Sept", 3, 2026], "Sept 3-6 Ottawa RoadTrip", "Trip"],
@@ -69,6 +70,7 @@ cleaning_durations = [
   ["living_room_sink",72]
 ]
 
+windowsRefresh = 0
 
   console.log("initial_check")
   locations = document.getElementsByClassName("location")
@@ -88,7 +90,7 @@ cleaning_durations = [
   populateUpcomingList()
   populateCalendar()
 
-setInterval(refreshData,60000)
+setInterval(refreshData,60000)//60000
 
 locations = document.getElementsByClassName("location")
 for (var i=0;i<locations.length;i++){
@@ -97,18 +99,25 @@ for (var i=0;i<locations.length;i++){
 
 function resetTimer(){
   console.log("click")
-  event.target.style.opacity=0
+  event.target.style.opacity=0.25
+  event.target.style.stroke="forestgreen"
+  event.target.style.fill="forestgreen"
   console.log(event.target.id)
   cur_values = JSON.parse(localStorage.getItem(event.target.id))
   cur_values[1] = Date.now()
   localStorage.setItem(event.target.id,JSON.stringify(cur_values))
-  document.getElementsByClassName("warning")[0].style.opacity=0
 }
 
 function refreshData(){
   colourCheck()
   populateCalendar()
   populateUpcomingList()
+  windowsRefresh++
+  if(windowsRefresh>=15){
+    window.location.reload()
+    windowsRefresh=0
+  }
+  //console.log(windowsRefresh)
 }
 
 function colourCheck(){
@@ -119,24 +128,32 @@ function colourCheck(){
     cur_values = JSON.parse(localStorage.getItem(locations[i].id))
     elapsed = (Date.now()-cur_values[1])/3600000
     opacity_shift = elapsed/cur_values[0]
-    locations[i].style.opacity=opacity_shift
+    if(opacity_shift>0.25) {
+      if(opacity_shift>1){
+        opacity_shift=1
+      }
+      locations[i].style.stroke="darkRed"
+      locations[i].style.fill="darkRed"
+      locations[i].style.opacity=(opacity_shift-0.25)*(1/0.75)
+    }else{
+      locations[i].style.opacity=0.25-opacity_shift
+      locations[i].style.stroke="forestgreen"
+      locations[i].style.fill="forestgreen"
+    }
   }
 }
 //13 things
 function populateUpcomingList(){
   listItems = document.getElementsByClassName("list_view")[0]
-  console.log(listItems)
+  //console.log(listItems)
   current_date = new Date();
   for (var i=0;i<important_dates.length;i++){
     if(important_dates[i][0][0]==month_to_text(current_date.getMonth())[1]){
       for (var j=0;j<listItems.children.length;j++){
       //for (const event_child of listItems.children){
-        console.log("Test")
         event_child=listItems.children[j]
-        console.log(event_child.children[0])
         e_date = event_child.children[0]
         e_text = event_child.children[1]
-        console.log(e_date)
         e_date.style.borderRadius = "4px"
         if(important_dates[i+j][2]=="Bday"){
           e_date.style.backgroundColor = "#222200"
@@ -150,8 +167,6 @@ function populateUpcomingList(){
         e_date.children[0].innerHTML=important_dates[i+j][0][0]
         e_date.children[1].innerHTML=important_dates[i+j][0][1]
         e_text.innerHTML=important_dates[i+j][1]
-        console.log(event_child.children[0].children[0])
-        console.log(event_child)
       }
     break
 
