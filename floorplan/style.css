@@ -4,6 +4,7 @@
 
 h1 {
   color: grey;
+  font-family: arial;
   margin: 10px 0px 15px 5px;
 }
 
@@ -30,9 +31,10 @@ table {
 }
 
 .date {
+  padding-top:2px;
   position: relative;
   float: left;
-  width: 30px;
+  width: 34px;
   text-align: center;
 }
 
@@ -45,20 +47,23 @@ p {
 
 .month {
   color: grey;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .day {
   color: grey;
-  font-size: 16px;
+  font-size: 18px;
 }
 .title {
   position: relative;
+  font-family: arial;
   float: left;
   color: grey;
-  font-size: 14px;
-  width: 242px;
+  font-size: 18px;
+  width: 238px;
   padding-left:8px;
+  line-height: 16px;
+  vertical-align: middle;
 }
 
 .event{

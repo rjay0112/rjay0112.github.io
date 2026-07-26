@@ -134,7 +134,7 @@ function colourCheck(){
       }
       locations[i].style.stroke="darkRed"
       locations[i].style.fill="darkRed"
-      locations[i].style.opacity=(opacity_shift-0.25)*(1/0.75)
+      locations[i].style.opacity=(opacity_shift-0.25)
     }else{
       locations[i].style.opacity=0.25-opacity_shift
       locations[i].style.stroke="forestgreen"
@@ -148,7 +148,7 @@ function populateUpcomingList(){
   //console.log(listItems)
   current_date = new Date();
   for (var i=0;i<important_dates.length;i++){
-    if(important_dates[i][0][0]==month_to_text(current_date.getMonth())[1]){
+    if(important_dates[i][0][0]==month_to_text(current_date.getMonth())[1]&&important_dates[i][0][1]>=current_date.getDate()){
       for (var j=0;j<listItems.children.length;j++){
       //for (const event_child of listItems.children){
         event_child=listItems.children[j]
@@ -156,13 +156,13 @@ function populateUpcomingList(){
         e_text = event_child.children[1]
         e_date.style.borderRadius = "4px"
         if(important_dates[i+j][2]=="Bday"){
-          e_date.style.backgroundColor = "#222200"
+          e_date.style.backgroundColor = "#444400"
         }
         else if(important_dates[i+j][2]=="Event"){
-          e_date.style.backgroundColor = "#002222"
+          e_date.style.backgroundColor = "#004444"
         }
         else if(important_dates[i+j][2]=="Trip"){
-          e_date.style.backgroundColor = "#220022"
+          e_date.style.backgroundColor = "#440044"
         }
         e_date.children[0].innerHTML=important_dates[i+j][0][0]
         e_date.children[1].innerHTML=important_dates[i+j][0][1]
@@ -204,11 +204,11 @@ function populateCalendar(){
           for (var l=0;l<important_dates.length;l++){
             if(important_dates[l][0][0]==month_short && important_dates[l][0][1]==day_count){
               if(important_dates[l][2]=="Bday"){
-                cal_table.children[j].children[k].style.backgroundColor="#222200"
+                cal_table.children[j].children[k].style.backgroundColor="#444400"
               }else if(important_dates[l][2]=="Event"){
-                cal_table.children[j].children[k].style.backgroundColor="#002222"
+                cal_table.children[j].children[k].style.backgroundColor="#004444"
               }else if(important_dates[l][2]=="Trip"){
-                cal_table.children[j].children[k].style.backgroundColor="#220022"
+                cal_table.children[j].children[k].style.backgroundColor="#440044"
               }
             }
           }
