@@ -5,7 +5,7 @@
 h1 {
   color: grey;
   font-family: arial;
-  margin: 10px 0px 15px 5px;
+  margin: 10px 0px 15px 1px;
 }
 
 h3 {
@@ -31,7 +31,7 @@ table {
 }
 
 .date {
-  padding-top:2px;
+  padding-top:3px;
   position: relative;
   float: left;
   width: 34px;
@@ -79,7 +79,7 @@ p {
 
 .list_view {
   position: relative;
-  height: 500px;
+  height: 510px;
   float: top;
 }
 
