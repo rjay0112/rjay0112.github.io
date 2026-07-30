@@ -131,10 +131,14 @@ function colourCheck(){
     if(opacity_shift>0.25) {
       if(opacity_shift>1){
         opacity_shift=1
+        locations[i].style.stroke="Maroon"
+        locations[i].style.fill="Maroon"
+        locations[i].style.opacity=(opacity_shift-0.25)
+      }else{
+        locations[i].style.stroke="goldenRod"
+        locations[i].style.fill="goldenRod"
+        locations[i].style.opacity=(opacity_shift-0.25)*(1/0.75)
       }
-      locations[i].style.stroke="darkRed"
-      locations[i].style.fill="darkRed"
-      locations[i].style.opacity=(opacity_shift-0.25)
     }else{
       locations[i].style.opacity=0.25-opacity_shift
       locations[i].style.stroke="forestgreen"
