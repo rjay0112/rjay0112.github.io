@@ -28,6 +28,7 @@ important_dates = [
   [["Aug", 1, 2026], "Krystyna's Birthday Party 4:00 pm", "Event"],
   [["Aug", 2, 2026], "Alice Oseman Book Signing Indigo Yorkdale 5:00-6:00 pm", "Event"],
   [["Aug", 7, 2026], "SpiderMan Movie ??", "Event"],
+  [["Aug", 11, 2026], "Rocket Birthday", "Bday"],
   [["Aug", 18, 2026], "Nick's Birthday", "Bday"],
   [["Aug", 21, 2026], "Aug 21-23 Andrew Cottage", "Trip"],
   [["Sept", 3, 2026], "Sept 3-6 Ottawa RoadTrip", "Trip"],
