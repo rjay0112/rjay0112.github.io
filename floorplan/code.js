@@ -32,6 +32,7 @@ important_dates = [
   [["Aug", 18, 2026], "Nick's Birthday", "Bday"],
   [["Aug", 21, 2026], "Aug 21-23 Andrew Cottage", "Trip"],
   [["Sept", 3, 2026], "Sept 3-6 Ottawa RoadTrip", "Trip"],
+  [["Sept", 7, 2026], "Shatha's First Day of School", "Event"],
   [["Sept", 8, 2026], "Brayden's Birthday", "Bday"],
   [["Sept", 12, 2026], "Ethan's Birthday", "Bday"],
   [["Sept", 17, 2026], "Chris's Birthday", "Bday"],
