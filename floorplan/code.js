@@ -31,6 +31,8 @@ important_dates = [
   [["Aug", 11, 2026], "Rocket Birthday", "Bday"],
   [["Aug", 18, 2026], "Nick's Birthday", "Bday"],
   [["Aug", 21, 2026], "Aug 21-23 Andrew Cottage", "Trip"],
+  [["Aug",29,2026], "Merrittville Races", "Event"],
+  [["Aug",31,2026], "The EX", "Event"],
   [["Sept", 3, 2026], "Sept 3-6 Ottawa Road Trip", "Trip"],
   [["Sept", 7, 2026], "Shatha's First Day of School", "Event"],
   [["Sept", 8, 2026], "Brayden's Birthday", "Bday"],
@@ -150,33 +152,42 @@ function colourCheck(){
 }
 //13 things
 function populateUpcomingList(){
+  found_month=false
+  month_counter=0
   listItems = document.getElementsByClassName("list_view")[0]
   //console.log(listItems)
   current_date = new Date();
-  for (var i=0;i<important_dates.length;i++){
-    if(important_dates[i][0][0]==month_to_text(current_date.getMonth())[1]&&important_dates[i][0][1]>=current_date.getDate()){
-      for (var j=0;j<listItems.children.length;j++){
-      //for (const event_child of listItems.children){
-        event_child=listItems.children[j]
-        e_date = event_child.children[0]
-        e_text = event_child.children[1]
-        e_date.style.borderRadius = "4px"
-        if(important_dates[i+j][2]=="Bday"){
-          e_date.style.backgroundColor = "#444400"
-        }
-        else if(important_dates[i+j][2]=="Event"){
-          e_date.style.backgroundColor = "#004444"
-        }
-        else if(important_dates[i+j][2]=="Trip"){
-          e_date.style.backgroundColor = "#440044"
-        }
-        e_date.children[0].innerHTML=important_dates[i+j][0][0]
-        e_date.children[1].innerHTML=important_dates[i+j][0][1]
-        e_text.innerHTML=important_dates[i+j][1]
-      }
-    break
-
+  while(found_month==false){
+    if(month_counter>0){
+      current_date = new Date(current_date.getFullYear(),current_date.getMonth()+1,1)
     }
+    for (var i=0;i<important_dates.length;i++){
+      if(important_dates[i][0][0]==month_to_text(current_date.getMonth())[1]&&important_dates[i][0][1]>=current_date.getDate()){
+        found_month=true
+        for (var j=0;j<listItems.children.length;j++){
+        //for (const event_child of listItems.children){
+          event_child=listItems.children[j]
+          e_date = event_child.children[0]
+          e_text = event_child.children[1]
+          e_date.style.borderRadius = "4px"
+          if(important_dates[i+j][2]=="Bday"){
+            e_date.style.backgroundColor = "#444400"
+          }
+          else if(important_dates[i+j][2]=="Event"){
+            e_date.style.backgroundColor = "#004444"
+          }
+          else if(important_dates[i+j][2]=="Trip"){
+            e_date.style.backgroundColor = "#440044"
+          }
+          e_date.children[0].innerHTML=important_dates[i+j][0][0]
+          e_date.children[1].innerHTML=important_dates[i+j][0][1]
+          e_text.innerHTML=important_dates[i+j][1]
+        }
+      break
+
+      }
+    }
+    month_counter=month_counter+1
   }
 
 
