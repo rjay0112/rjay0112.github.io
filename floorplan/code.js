@@ -141,7 +141,7 @@ function colourCheck(){
       }else{
         locations[i].style.stroke="goldenRod"
         locations[i].style.fill="goldenRod"
-        locations[i].style.opacity=(opacity_shift-0.25)*(1/0.75)
+        locations[i].style.opacity=(opacity_shift-0.25)
       }
     }else{
       locations[i].style.opacity=0.25-opacity_shift
