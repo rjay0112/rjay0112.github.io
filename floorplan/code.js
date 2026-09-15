@@ -166,6 +166,9 @@ function populateUpcomingList(){
         found_month=true
         for (var j=0;j<listItems.children.length;j++){
         //for (const event_child of listItems.children){
+          if((i+j)>=important_dates.length){
+            break
+          }
           event_child=listItems.children[j]
           e_date = event_child.children[0]
           e_text = event_child.children[1]
