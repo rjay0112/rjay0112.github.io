@@ -37,14 +37,26 @@ important_dates = [
   [["Sept", 7, 2026], "Shatha's First Day of School", "Event"],
   [["Sept", 8, 2026], "Brayden's Birthday", "Bday"],
   [["Sept", 12, 2026], "Ethan's Birthday", "Bday"],
-  [["Oct", 3, 2026], "Tentative FriendsGiving", "Event"],
   [["Sept", 17, 2026], "Chris's Birthday", "Bday"],
+  [["Sept", 22, 2026], "Dodgeball 9pm", "Event"],
+  [["Sept", 25, 2026], "Trivia Boston Pizza Courtney Park 6:30pm", "Event"],
+  [["Sept", 29, 2026], "Dodgeball 9pm", "Event"],
+  [["Oct", 3, 2026], "Tentative FriendsGiving", "Event"],
+  [["Oct", 6, 2026], "Dodgeball 9pm", "Event"],
+  [["Oct", 13, 2026], "Dodgeball 8pm", "Event"],
   [["Oct", 13, 2026], "Sean & Nicole's Anniversary", "Bday"],
+  [["Oct", 20, 2026], "Dodgeball 8pm", "Event"],
   [["Oct", 22, 2026], "Grandma's Birthday", "Bday"],
   [["Oct", 25, 2026], "Nicole's Birthday", "Bday"],
   [["Oct", 26, 2026], "Isla's Birthday", "Bday"],
+  [["Oct", 27, 2026], "Dodgeball 8pm", "Event"],
+  [["Nov", 3, 2026], "Dodgeball 9pm", "Event"],
   [["Nov", 8, 2026], "Shatha's Birthday", "Bday"],
-  [["Nov", 9, 2026], "The Canadian Toronto-Vancouver Train", "Trip"]
+  [["Nov", 9, 2026], "The Canadian Toronto-Vancouver Train", "Trip"],
+  [["Nov", 10, 2026], "Dodgeball 9pm", "Event"],
+  [["Nov", 17, 2026], "Dodgeball 9pm", "Event"],
+  [["Nov", 24, 2026], "Dodgeball 8pm", "Event"],
+  [["Dec", 19, 2026], "New York Holiday Trip", "Trip"]
 ]
 
 cleaning_durations = [
