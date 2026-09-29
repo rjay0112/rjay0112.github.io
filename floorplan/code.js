@@ -43,6 +43,7 @@ important_dates = [
   [["Sept", 29, 2026], "Dodgeball 9pm", "Event"],
   [["Oct", 3, 2026], "Tentative FriendsGiving", "Event"],
   [["Oct", 6, 2026], "Dodgeball 9pm", "Event"],
+  [["Oct", 11, 2026], "anti capitalist book fair", "Event"],
   [["Oct", 13, 2026], "Dodgeball 8pm", "Event"],
   [["Oct", 13, 2026], "Sean & Nicole's Anniversary", "Bday"],
   [["Oct", 20, 2026], "Dodgeball 8pm", "Event"],
