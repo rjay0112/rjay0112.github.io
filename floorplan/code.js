@@ -54,6 +54,7 @@ important_dates = [
   [["Oct", 31, 2026], "Pumpkin Carving", "Event"],
   [["Nov", 3, 2026], "Dodgeball 9pm", "Event"],
   [["Nov", 5, 2026], "4th or 5th Mandarin??", "Event"],
+  [["Nov", 7, 2026], "The Sugar Post Candy Store!", "Event"],
   [["Nov", 8, 2026], "Shatha's Birthday", "Bday"],
   [["Nov", 9, 2026], "The Canadian Toronto-Vancouver Train", "Trip"],
   [["Nov", 15, 2026], "Flight back from Vancouver", "Trip"],
