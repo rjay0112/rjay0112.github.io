@@ -63,7 +63,8 @@ important_dates = [
   [["Nov", 24, 2026], "Dodgeball 8pm", "Event"],
   [["Nov", 26, 2026], "Distillery Market Chris/Vanessa 4pm", "Event"],
   [["Dec", 19, 2026], "New York Holiday Trip", "Trip"],
-  [["Dec", 19, 2026], "Team Canada Hockey Watching at Nicoles", "Event"],
+  [["Dec", 26, 2026], "Dad Birthday", "Bday"],
+  [["Dec", 27, 2026], "Team Canada Hockey Watching at Nicoles", "Event"],
   [["Dec", 31, 2026], "Nutcracker 11am", "Event"],
   [["Dec", 31, 2026], "New Years Eves at Krystynas", "Event"]
 ]
